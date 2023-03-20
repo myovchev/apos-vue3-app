@@ -6,8 +6,9 @@
 {% extends "layout.html" %}
 
 {% block main %}
-  <section class="bp-content">
-    <h1>{{ data.page.title }}</h1>
-    {% area data.page, 'main' %}
-  </section>
+  <h1 class="mb-8">{{ data.page.title }}</h1>
+  {% if data.page.tagline %}
+    <p class="t-subtitle max-w-3xl mb-8">{{ data.page.tagline }}</p>
+  {% endif %}
+  {% area data.page, 'main' %}
 {% endblock %}

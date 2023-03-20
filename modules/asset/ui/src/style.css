@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography */
+@layer base {
+  h1 {
+    @apply t-heading-1;
+  }
+
+  h2 {
+    @apply t-heading-2;
+  }
+
+  h3 {
+    @apply t-heading-3;
+  }
+
+  h4 {
+    @apply t-heading-4;
+  }
+
+  h5 {
+    @apply t-heading-5;
+  }
+
+  h6 {
+    @apply t-heading-6;
+  }
+
+  p {
+    @apply t-body;
+  }
+}
+
+@layer components {
+  .t-display {
+    @apply  text-7xl
+      font-sansd
+      uppercase;
+  }
+
+  .t-heading-1 {
+    @apply text-6xl;
+  }
+
+  .t-heading-2 {
+    @apply text-5xl;
+  }
+
+  .t-heading-3 {
+    @apply text-4xl;
+  }
+
+  .t-heading-4 {
+    @apply text-3xl;
+  }
+
+  .t-heading-5 {
+    @apply text-2xl;
+  }
+
+  .t-heading-6 {
+    @apply text-xl;
+  }
+
+  .t-subtitle {
+    @apply text-2xl
+      font-extralight;
+  }
+
+  .t-subtitle-small {
+    @apply text-xl
+      font-extralight;
+  }
+
+  .t-caption {
+    @apply text-xs font-semibold uppercase;
+  }
+
+  .t-body-large {
+    @apply text-lg;
+  }
+
+  .t-body-large--muted {
+    @apply t-body-large text-black-400;
+  }
+
+  .t-body-large--bold {
+    @apply text-lg
+      font-semibold;
+  }
+
+  .t-body {
+    @apply text-base;
+  }
+
+  .t-body--muted {
+    @apply t-body text-black-400;
+  }
+
+  .t-body--bold {
+    @apply text-base
+      font-semibold;
+  }
+
+  .t-body-small {
+    @apply text-xs;
+  }
+
+  .t-body-small--muted {
+    @apply t-body-small text-black-400;
+  }
+
+  .t-body-small--bold {
+    @apply text-xs
+      font-bold;
+  }
+
+  .t-button {
+    @apply t-button-text
+      no-underline;
+  }
+
+  .t-button--small {
+    @apply t-button normal-case font-normal;
+  }
+
+  .t-button-text {
+    @apply text-base
+      font-semibold
+      leading-6
+      tracking-wider
+      uppercase
+      underline
+      hover:decoration-[0.125em];
+  }
+
+  .t-inline-link {
+    @apply font-bold underline
+      hover:decoration-[0.125em]
+      hover:text-purple-800
+      active:text-purple-800
+      visited:text-purple-800
+      cursor-pointer;
+  }
+}

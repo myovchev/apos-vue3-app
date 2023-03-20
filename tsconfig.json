@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "node16",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": [ "ESNext", "DOM" ],
+    "skipLibCheck": true,
+    "allowJs": false,
+    "declaration": false
+  },
+  // "exclude": [ "node_modules" ],
+  "include": [
+    "./modules/todo/ui", 
+    "./modules/**/*.{ts,vue}", 
+    "./modules/**/*.d.ts",
+    "./index.d.ts"
+  ]
+}

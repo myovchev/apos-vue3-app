@@ -1,5 +1,5 @@
 require('apostrophe')({
-  shortName: 'a3-boilerplate',
+  shortName: 'a3-vue3-demo',
   modules: {
     // Apostrophe module configuration
     // *******************************
@@ -29,6 +29,12 @@ require('apostrophe')({
     // `asset` supports the project's webpack build for client-side assets.
     asset: {},
     // The project's first custom page type.
-    'default-page': {}
+    'default-page': {},
+    // Vue 3 support
+    '@corllete/apos-vue3': {},
+    '@corllete/apos-vue3-asset': {},
+    // Vue 3 app and widget
+    todo: {},
+    'todo-widget': {}
   }
 });

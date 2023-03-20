@@ -5,6 +5,10 @@ module.exports = {
   },
   fields: {
     add: {
+      tagline: {
+        type: 'string',
+        label: 'Tagline'
+      },
       main: {
         type: 'area',
         options: {
@@ -37,7 +41,8 @@ module.exports = {
               ]
             },
             '@apostrophecms/image': {},
-            '@apostrophecms/video': {}
+            '@apostrophecms/video': {},
+            todo: {}
           }
         }
       }
@@ -47,6 +52,7 @@ module.exports = {
         label: 'Basics',
         fields: [
           'title',
+          'tagline',
           'main'
         ]
       }
