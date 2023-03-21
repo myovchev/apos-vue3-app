@@ -10,13 +10,14 @@ Run `npm run dev` to build the Apostrophe UI and start the site up. Remember, th
 
 ## Integration details
 
-- `modules/@apostrophe/home-page/views/page.html`: Replace the default home page
 - `modules/asset/index.js`: Tailwind webpack configuration
 - `modules/asset/ui/src/style.css`: Tailwind entrypoint
 - `modules/asset/ui/src/index.js`: Bundle the Tailwind styles as a global include
 - `modules/todo` - A piece that also mounts external Vue 3 app and builds it's own
 - `modules/todo-widget` - A widget that mounts (offered in the `todo` piece) Apostrophe Vue app
 - `index.d.ts` - To let TS know we have types, needed because our module is CJS.
+- `modules/@apostrophe/home-page/views/page.html`: Replace the default home page
+- `modules/default-page/views/page.html`: Add `todo` widget
 
 ## Dependencies
 
