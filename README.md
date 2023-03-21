@@ -21,6 +21,12 @@ Run `npm run dev` to build the Apostrophe UI and start the site up. Remember, th
 ## Dependencies
 
 - `myovchev/todo-vue3` - a repository installed as npm package `@myovchev/todo-vue3`, contains simple Todo App, bundled with Vite.
-- `@corllete/apos-vue3` - Apostrophe Webpack configuration for Vue 3. 
+- `corllete/apos-vue3` - Apostrophe Webpack configuration for Vue 3 (not an npm package yet). 
 - `vue@^3` - Vue 3
 - `vue-tsc` - Development only, alows CI type checking (`npm run test`)
+
+Additional dependencies related with the Tailwind CSS integration - `css-loader`, `postcss`, `postcss-loader`, `style-loader`, `tailwindcss`.
+
+## Notes
+
+It's not "ready" to do anything but to demonstrate our Todo app. It needs global styles to handle vertical spacing in and between rich-text/image/video.todo widgets.
