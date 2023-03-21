@@ -14,11 +14,11 @@
 		// Grant organization private repos access
 		"codespaces": {
 			// https://docs.github.com/en/codespaces/managing-your-codespaces/managing-repository-access-for-your-codespaces
-			"repositories": {
-				"apostrophecms/*": {
-					"permissions": "write-all"
-				}
-			}
+			// "repositories": {
+			// 	"apostrophecms/*": {
+			// 		"permissions": "write-all"
+			// 	}
+			// }
 		},
 		// Configure properties specific to VS Code.
 		"vscode": {
