@@ -8,6 +8,10 @@ Install dependencies: `npm install`
 
 Run `npm run dev` to build the Apostrophe UI and start the site up. Remember, this is during alpha development, so we're all in "dev mode." The `dev` script will watch for saves in client-side CSS and Javascript and trigger a build and page refresh if they are detected. It will also restart the app when server-side code is saved.
 
+## How to test the feature
+
+Home page should have a Todo app mounted. Create a new page and add `todo` widget to it (create new Todo piece record in the process). It should be shown on the page, it should pre-load the existing todos from the Todo piece. It should save it's state - on adding new todos or changing completed state. 
+
 ## Integration details
 
 - `modules/asset/index.js`: Tailwind webpack configuration
