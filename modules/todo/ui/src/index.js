@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp, createSSRApp } from 'vue';
 import { TodoApp, TodoAppPlugin } from '@myovchev/todo-vue3';
 import App from './App.vue';
 
@@ -18,7 +18,14 @@ export default () => {
         continue;
       }
       el.removeAttribute('data-props');
-      const app = createApp(TodoApp);
+      let app;
+      if (el.getAttribute('data-ssr') === 'true') {
+        app = createSSRApp({
+          template: '<TodoApp />'
+        });
+      } else {
+        app = createApp(TodoApp);
+      }
       app.mount(el);
     }
   }
@@ -34,7 +41,15 @@ export default () => {
     }
     const props = JSON.parse(el.getAttribute('data-props') || '{}');
     el.removeAttribute('data-props');
-    const app = createApp(App, props);
+    let app = createApp(App, props);
+    if (el.getAttribute('data-ssr') === 'true') {
+      app = createSSRApp({
+        template: '<App v-bind="props" />',
+        data: () => ({ props })
+      });
+    } else {
+      app = createApp(App, props);
+    }
     app.use(TodoAppPlugin);
     app.mount(el);
   }
